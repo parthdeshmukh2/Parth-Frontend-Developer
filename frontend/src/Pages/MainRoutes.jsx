@@ -1,17 +1,23 @@
-import React from 'react'
-import {Routes, Route} from "react-router-dom"
-import ReqAuth from '../Components/ReqAuth'
-import LandingPage from './LandingPage'
-import Login from './Login'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import ReqAuth from "../Components/ReqAuth";
+import LandingPage from "./LandingPage";
+import Login from "./Login";
 
 const MainRoutes = () => {
   return (
     <Routes>
-        <Route path='/' element={<Login/>}  />
-        <Route path='/home' element={<ReqAuth><LandingPage/></ReqAuth>}  />
-      
+      <Route path="/" element={<Login />} />
+      <Route
+        path="/home"
+        element={
+          <ReqAuth>
+            <LandingPage />
+          </ReqAuth>
+        }
+      />
     </Routes>
-  )
-}
+  );
+};
 
-export default MainRoutes
+export default MainRoutes;

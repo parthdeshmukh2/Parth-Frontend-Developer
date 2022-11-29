@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 import ItemCard from "./ItemCard";
 
-const DataGrid = ({data}) => {
+const DataGrid = ({ data }) => {
   return (
     <Box
       w="90%"

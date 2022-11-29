@@ -21,7 +21,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     setData(capsulesData);
-    console.log(page)
+    console.log(page);
   }, [capsulesData]);
 
   console.log(data);
@@ -30,9 +30,9 @@ const LandingPage = () => {
     <Box>
       <Navbar />
       <Crousel />
-      <Filter data={data} setData={setData}/>
+      <Filter data={data} setData={setData} />
       <DataGrid data={data} />
-      <Pagination page={page} setPage={setPage}/>
+      <Pagination page={page} setPage={setPage} />
       <Footer />
     </Box>
   );
