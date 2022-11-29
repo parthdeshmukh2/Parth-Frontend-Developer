@@ -8,12 +8,15 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", async (req, res) => {
+
+    const {page} = req.params
+
   const response = await fetch("https://api.spacexdata.com/v3/capsules");
   const body = await response.json();
   res.send(body);
 });
 
-app.get("/:types", async (req, res) => {
+app.get("/type/:types", async (req, res) => {
   const { types } = req.params;
   const response = await fetch(
     `https://api.spacexdata.com/v3/capsules/?type=${types}`

@@ -17,12 +17,12 @@ const LandingPage = () => {
 
   useEffect(() => {
     dispatch(getData());
-  }, [page]);
+  }, []);
 
   useEffect(() => {
     setData(capsulesData);
     console.log(page)
-  }, [capsulesData, page]);
+  }, [capsulesData]);
 
   console.log(data);
 
@@ -30,7 +30,7 @@ const LandingPage = () => {
     <Box>
       <Navbar />
       <Crousel />
-      <Filter/>
+      <Filter data={data} setData={setData}/>
       <DataGrid data={data} />
       <Pagination page={page} setPage={setPage}/>
       <Footer />
